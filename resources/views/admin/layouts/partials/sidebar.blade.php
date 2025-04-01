@@ -30,7 +30,7 @@
                 </li>
                 <li class="nav-item {{ request()->is('admin
                 /menu-categories*') ? 'active' : '' }}">
-                    <a href="{{  route('home') }}" class="collapsed" aria-expanded="false">
+                    <a href="{{  route('menu-categories.index') }}" class="collapsed" aria-expanded="false">
                         <i class="fas fa-coins"></i>
                         <p>Menu Category</p>
                     </a>
