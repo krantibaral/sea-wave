@@ -17,9 +17,17 @@
         border: 1px solid #ccc;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
+
+    .required-field {
+        font-weight: bold;
+    }
+
+
+    .form-control::placeholder {
+        font-size: 14px;
+    }
 </style>
 
-<!-- New Fields for Menu Category -->
 <div class="row">
     <div class="col-lg-12">
         <div class="form-group">

@@ -9,7 +9,7 @@
     />
     <link
       rel="icon"
-      href="{{ asset('assets/img/kaiadmin/favicon.ico') }}"
+      href="{{ asset('favicon.ico') }}"
       type="image/x-icon"
     />
 
