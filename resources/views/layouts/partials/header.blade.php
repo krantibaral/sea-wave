@@ -22,7 +22,7 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
               <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-              <li class="nav-item"><a class="nav-link" href="menu.html">menu</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ route('front.menu') }}">Menu</a></li>
               <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
                 <ul>
                   <li class="nav-item"><a class="nav-link" href="service-single.html">Services Details</a></li>

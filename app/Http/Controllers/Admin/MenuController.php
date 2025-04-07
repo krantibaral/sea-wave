@@ -6,6 +6,7 @@ use App\Http\Controllers\BaseController;
 use App\Models\Menu;
 use App\Models\MenuCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class MenuController extends BaseController
 {
@@ -41,12 +42,15 @@ class MenuController extends BaseController
             'banner_image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ]);
 
-        $menu = Menu::create($request->except(['food_image', 'banner_image']));
-        
+        $data = $request->except(['food_image', 'banner_image']);
+        $data['slug'] = Str::slug($data['name']); // generate slug from name
+
+        $menu = Menu::create($data);
+
         if ($request->hasFile('food_image')) {
             $menu->addMedia($request->file('food_image'))->toMediaCollection('food_images');
         }
-        
+
         if ($request->hasFile('banner_image')) {
             $menu->addMedia($request->file('banner_image'))->toMediaCollection('banner_images');
         }
@@ -81,12 +85,12 @@ class MenuController extends BaseController
         ]);
 
         $menu->update($request->except(['food_image', 'banner_image']));
-        
+
         if ($request->hasFile('food_image')) {
             $menu->clearMediaCollection('food_images');
             $menu->addMedia($request->file('food_image'))->toMediaCollection('food_images');
         }
-        
+
         if ($request->hasFile('banner_image')) {
             $menu->clearMediaCollection('banner_images');
             $menu->addMedia($request->file('banner_image'))->toMediaCollection('banner_images');
