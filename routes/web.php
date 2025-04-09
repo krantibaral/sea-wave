@@ -12,9 +12,7 @@ require __DIR__ . '/auth.php';
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FrontController::class, 'index'])->name('welcome');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -25,3 +23,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 });
 
 Route::get('/menu', [FrontController::class, 'menu'])->name('front.menu');
+Route::get('/about-us', [FrontController::class, 'about'])->name('front.about');
+Route::get('/menu-details/{slug}', [FrontController::class, 'menuDetails'])->name('front.menu-details');
+Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');

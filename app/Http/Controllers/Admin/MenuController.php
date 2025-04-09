@@ -21,7 +21,7 @@ class MenuController extends BaseController
     public function index()
     {
         $data = $this->crudInfo();
-        $data['items'] = Menu::with('category')->orderBy('created_at', 'desc')->get();
+        $data['items'] = Menu::with('category')->orderBy('created_at', 'desc')->paginate(10);
         return view($this->indexResource(), $data);
     }
 
@@ -35,28 +35,42 @@ class MenuController extends BaseController
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            'name' => 'required|string|max:255',
             'price' => 'required|numeric',
             'category_id' => 'required|exists:menu_categories,id',
-            'food_image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
-            'banner_image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
+            'description' => 'nullable|string',
+            'food_image' => 'nullable|image|max:2048',
+            'special_menu' => 'nullable|boolean', // Validate special_menu field
         ]);
 
-        $data = $request->except(['food_image', 'banner_image']);
-        $data['slug'] = Str::slug($data['name']); // generate slug from name
+        try {
+            $slug = Str::slug($request->name);
+            $existingMenu = Menu::where('slug', $slug)->first();
 
-        $menu = Menu::create($data);
+            if ($existingMenu) {
+                $slug = $slug . '-' . Str::random(5); 
+            }
 
-        if ($request->hasFile('food_image')) {
-            $menu->addMedia($request->file('food_image'))->toMediaCollection('food_images');
+            $menu = new Menu();
+            $menu->name = $request->name;
+            $menu->price = $request->price;
+            $menu->category_id = $request->category_id;
+            $menu->description = $request->description;
+            $menu->slug = $slug;
+            $menu->special_menu = $request->has('special_menu') ? $request->special_menu : false; // Set default value to false
+
+            $menu->save();
+
+            if ($request->hasFile('food_image')) {
+                $menu->addMediaFromRequest('food_image')->toMediaCollection('food_images');
+            }
+
+            return redirect()->route($this->indexRoute())
+                ->with('success', 'Menu item created successfully.');
+        } catch (\Exception $e) {
+            return redirect()->route($this->indexRoute())
+                ->with('error', 'There was an error creating the menu item.');
         }
-
-        if ($request->hasFile('banner_image')) {
-            $menu->addMedia($request->file('banner_image'))->toMediaCollection('banner_images');
-        }
-
-        return redirect()->route($this->indexRoute())
-            ->with('success', 'Menu item added successfully.');
     }
 
     public function show(Menu $menu)
@@ -82,9 +96,13 @@ class MenuController extends BaseController
             'category_id' => 'required|exists:menu_categories,id',
             'food_image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
             'banner_image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
+            'special_menu' => 'nullable|boolean', // Validate special_menu field
         ]);
 
         $menu->update($request->except(['food_image', 'banner_image']));
+
+        // Update the special_menu field
+        $menu->special_menu = $request->has('special_menu') ? $request->special_menu : false;
 
         if ($request->hasFile('food_image')) {
             $menu->clearMediaCollection('food_images');

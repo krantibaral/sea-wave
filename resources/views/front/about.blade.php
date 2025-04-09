@@ -1,127 +1,27 @@
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="Awaiken">
-	<!-- Page Title -->
-    <title>Spicyhunt - Restaurant HTML Template</title>
-	<!-- Favicon Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-	<!-- Google Fonts Css-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	<!-- Bootstrap Css -->
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<!-- SlickNav Css -->
-	<link href="css/slicknav.min.css" rel="stylesheet">
-	<!-- Swiper Css -->
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<!-- Font Awesome Icon Css-->
-	<link href="css/all.min.css" rel="stylesheet" media="screen">
-	<!-- Animated Css -->
-	<link href="css/animate.css" rel="stylesheet">
-    <!-- Magnific Popup Core Css File -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<!-- Mouse Cursor Css File -->
-	<link rel="stylesheet" href="css/mousecursor.css">
-	<!-- Main Custom Css -->
-	<link href="css/custom.css" rel="stylesheet" media="screen">
-</head>
-<body>
-
-    <!-- Preloader Start -->
-	<div class="preloader">
-		<div class="loading-container">
-			<div class="loading"></div>
-			<div id="loading-icon"><img src="images/loader.svg" alt=""></div>
-		</div>
-	</div>
-	<!-- Preloader End -->
-
-    <!-- Header Start -->
-	<header class="main-header">
-		<div class="header-sticky">
-			<nav class="navbar navbar-expand-lg">
-				<div class="container">
-					<!-- Logo Start -->
-					<a class="navbar-brand" href="./">
-						<img src="images/logo.svg" alt="Logo">
-					</a>
-					<!-- Logo End -->
-
-					<!-- Main Menu Start -->
-					<div class="collapse navbar-collapse main-menu">
-                        <div class="nav-menu-wrapper">
-                            <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item submenu"><a class="nav-link" href="./">Home</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="index.html">Home - Image</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-video.html">Home - Video</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-slider.html">Home - Slider</a></li>
-                                    </ul>
-                                </li>                                
-                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
-                                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                                <li class="nav-item"><a class="nav-link" href="menu.html">menu</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
-                                    <ul>                                        
-                                        <li class="nav-item"><a class="nav-link" href="service-single.html">Services Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="chefs.html">Our Chefs</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="chef-single.html">Chef Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="testimonial.html">Testimonials</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="image-gallery.html">Image Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="video-gallery.html">Video Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>                           
-                            </ul>
-                        </div>
-                        <!-- Header Contact Box Start -->
-                        <div class="header-btn">
-                            <a href="contact.html" class="btn-default">book a table</a>
-                        </div>
-                        <!-- Header Contact Box End -->
-					</div>
-					<!-- Main Menu End -->
-					<div class="navbar-toggle"></div>
-				</div>
-			</nav>
-			<div class="responsive-menu"></div>
-		</div>
-	</header>
-	<!-- Header End -->
+@extends('layouts.app')
+@section('content')
 
     <!-- Page Header Start -->
-	<div class="page-header parallaxie">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<!-- Page Header Box Start -->
-					<div class="page-header-box">
-						<h1 class="text-anime-style-2" data-cursor="-opaque">About us</h1>
-						<nav class="wow fadeInUp">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="./">home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">about us</li>
-							</ol>
-						</nav>
-					</div>
-					<!-- Page Header Box End -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Page Header End -->
+    <div class="page-header parallaxie">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="text-anime-style-2" data-cursor="-opaque">About us</h1>
+                        <nav class="wow fadeInUp">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="./">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">about us</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
 
     <!-- About Us Section Start -->
     <div class="about-us">
@@ -167,8 +67,12 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">about us</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Our Commitment to Authenticity & <span>excellence</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Every dish we create is a celebration of connection, crafted with passion and inspired by diverse flavors. Join us in an inviting space where every bite sparks joy and every moment becomes a cherished memory.</p>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Our Commitment to Authenticity &
+                                <span>excellence</span>
+                            </h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Every dish we create is a celebration of
+                                connection, crafted with passion and inspired by diverse flavors. Join us in an inviting
+                                space where every bite sparks joy and every moment becomes a cherished memory.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -206,7 +110,7 @@
                             </div>
                         </div>
                         <!-- About Detail Item End -->
-    
+
                         <!-- About Detail Item Start -->
                         <div class="about-detail-item wow fadeInUp" data-wow-delay="0.2s">
                             <div class="icon-box">
@@ -218,7 +122,7 @@
                             </div>
                         </div>
                         <!-- About Detail Item End -->
-    
+
                         <!-- About Detail Item Start -->
                         <div class="about-detail-item wow fadeInUp" data-wow-delay="0.4s">
                             <div class="icon-box">
@@ -246,7 +150,9 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">our approach</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Delivering memorable dining <span>experiences</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Delivering memorable dining
+                            <span>experiences</span>
+                        </h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -260,13 +166,17 @@
                         <div class="our-approch-tab-nav wow fadeInUp" data-wow-delay="0.2s">
                             <ul class="nav nav-tabs" id="approchTab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="mission-tab" data-bs-toggle="tab" data-bs-target="#mission" type="button" role="tab" aria-selected="true">our mission</button>
+                                    <button class="nav-link active" id="mission-tab" data-bs-toggle="tab"
+                                        data-bs-target="#mission" type="button" role="tab" aria-selected="true">our
+                                        mission</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="vision-tab" data-bs-toggle="tab" data-bs-target="#vision" type="button" role="tab" aria-selected="false">our vision</button>
+                                    <button class="nav-link" id="vision-tab" data-bs-toggle="tab" data-bs-target="#vision"
+                                        type="button" role="tab" aria-selected="false">our vision</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="value-tab" data-bs-toggle="tab" data-bs-target="#value" type="button" role="tab" aria-selected="false">our value</button>
+                                    <button class="nav-link" id="value-tab" data-bs-toggle="tab" data-bs-target="#value"
+                                        type="button" role="tab" aria-selected="false">our value</button>
                                 </li>
                             </ul>
                         </div>
@@ -283,8 +193,13 @@
                                             <!-- Section Title Start -->
                                             <div class="section-title">
                                                 <h3 class="wow fadeInUp">our mission</h3>
-                                                <h2 class="text-anime-style-2" data-cursor="-opaque">creating moments around flavor</h2>
-                                                <p class="wow fadeInUp" data-wow-delay="0.2s">At SpicyHunt, our vision is to redefine the dining experience by bringing people together over authentic, flavorful meals crafted with love and passion. We aim to be a beacon of culinary excellence, where every dish tells a story of tradition, innovation, and uncompromising quality.</p>
+                                                <h2 class="text-anime-style-2" data-cursor="-opaque">creating moments around
+                                                    flavor</h2>
+                                                <p class="wow fadeInUp" data-wow-delay="0.2s">At SpicyHunt, our vision is to
+                                                    redefine the dining experience by bringing people together over
+                                                    authentic, flavorful meals crafted with love and passion. We aim to be a
+                                                    beacon of culinary excellence, where every dish tells a story of
+                                                    tradition, innovation, and uncompromising quality.</p>
                                             </div>
                                             <!-- Section Title End -->
 
@@ -323,7 +238,10 @@
                                             <div class="section-title">
                                                 <h3>our vision</h3>
                                                 <h2 data-cursor="-opaque">creating moments around flavor</h2>
-                                                <p>At SpicyHunt, our vision is to redefine the dining experience by bringing people together over authentic, flavorful meals crafted with love and passion. We aim to be a beacon of culinary excellence, where every dish tells a story of tradition, innovation, and uncompromising quality.</p>
+                                                <p>At SpicyHunt, our vision is to redefine the dining experience by bringing
+                                                    people together over authentic, flavorful meals crafted with love and
+                                                    passion. We aim to be a beacon of culinary excellence, where every dish
+                                                    tells a story of tradition, innovation, and uncompromising quality.</p>
                                             </div>
                                             <!-- Section Title End -->
 
@@ -362,7 +280,10 @@
                                             <div class="section-title">
                                                 <h3>our value</h3>
                                                 <h2 data-cursor="-opaque">creating moments around flavor</h2>
-                                                <p>At SpicyHunt, our vision is to redefine the dining experience by bringing people together over authentic, flavorful meals crafted with love and passion. We aim to be a beacon of culinary excellence, where every dish tells a story of tradition, innovation, and uncompromising quality.</p>
+                                                <p>At SpicyHunt, our vision is to redefine the dining experience by bringing
+                                                    people together over authentic, flavorful meals crafted with love and
+                                                    passion. We aim to be a beacon of culinary excellence, where every dish
+                                                    tells a story of tradition, innovation, and uncompromising quality.</p>
                                             </div>
                                             <!-- Section Title End -->
 
@@ -445,8 +366,11 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">our daily offers</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">taste the savings with our <span>daily specials</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Every day is an opportunity to enjoy your favorites at a discounted price. Explore our daily rotating specials and indulge in flavorful meals at a fraction of the cost.</p>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">taste the savings with our <span>daily
+                                    specials</span></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Every day is an opportunity to enjoy your
+                                favorites at a discounted price. Explore our daily rotating specials and indulge in
+                                flavorful meals at a fraction of the cost.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -484,7 +408,10 @@
                         <div class="intro-bg-video">
                             <!-- Selfhosted Video Start -->
                             <!-- <video autoplay muted loop id="myVideo"><source src="images/hero-bg-video.mp4" type="video/mp4"></video> -->
-                            <video autoplay muted loop id="myVideo"><source src="https://demo.awaikenthemes.com/assets/videos/spicyhunt-intro-bg-video.mp4" type="video/mp4"></video>
+                            <video autoplay muted loop id="myVideo">
+                                <source src="https://demo.awaikenthemes.com/assets/videos/spicyhunt-intro-bg-video.mp4"
+                                    type="video/mp4">
+                            </video>
                             <!-- Selfhosted Video End -->
 
                             <!-- Youtube Video Start -->
@@ -493,7 +420,8 @@
                         </div>
                         <!-- Video Play Button Start -->
                         <div class="video-play-button">
-                            <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">play</a>
+                            <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
+                                data-cursor-text="Play">play</a>
                         </div>
                         <!-- Video Play Button End -->
                     </div>
@@ -512,7 +440,9 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">always quality</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">the talented minds behind every <span>flavourful dish</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">the talented minds behind every
+                            <span>flavourful dish</span>
+                        </h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -531,7 +461,7 @@
                             </a>
                         </div>
                         <!-- team Image End -->
-                
+
                         <!-- Team Body Start -->
                         <div class="team-body">
                             <!-- Team Content Start -->
@@ -568,7 +498,7 @@
                             </a>
                         </div>
                         <!-- team Image End -->
-                
+
                         <!-- Team Body Start -->
                         <div class="team-body">
                             <!-- Team Content Start -->
@@ -605,7 +535,7 @@
                             </a>
                         </div>
                         <!-- team Image End -->
-                
+
                         <!-- Team Body Start -->
                         <div class="team-body">
                             <!-- Team Content Start -->
@@ -642,7 +572,7 @@
                             </a>
                         </div>
                         <!-- team Image End -->
-                
+
                         <!-- Team Body Start -->
                         <div class="team-body">
                             <!-- Team Content Start -->
@@ -670,7 +600,8 @@
                 <div class="col-lg-12">
                     <!-- Section Footer Text Start -->
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.8s">
-                        <p>Meet the passionate team behind every flavour and experience <a href="chefs.html">meet our team</a></p>
+                        <p>Meet the passionate team behind every flavour and experience <a href="chefs.html">meet our
+                                team</a></p>
                     </div>
                     <!-- Section Footer Text End -->
                 </div>
@@ -687,7 +618,8 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">our testimonials</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">real stories of memorable <span>meals and experiences</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">real stories of memorable <span>meals and
+                                experiences</span></h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -706,14 +638,17 @@
                                             <img src="images/testimonial-quote.svg" alt="">
                                         </div>
                                         <div class="testimonial-content">
-                                            <p>From the moment we walked in, the ambiance was welcoming, and the service was top-notch. The dish was absolutely delicious, full of fresh flavors, and perfectly cooked. I especially loved how the staff took the time to explain the menu and suggest pairings for our meal.</p>
+                                            <p>From the moment we walked in, the ambiance was welcoming, and the service was
+                                                top-notch. The dish was absolutely delicious, full of fresh flavors, and
+                                                perfectly cooked. I especially loved how the staff took the time to explain
+                                                the menu and suggest pairings for our meal.</p>
                                         </div>
                                         <div class="author-info">
                                             <div class="author-image">
                                                 <figure class="image-anime">
                                                     <img src="images/author-1.jpg" alt="">
                                                 </figure>
-                                            </div>            
+                                            </div>
                                             <div class="author-content">
                                                 <h3>wade l warren, developer</h3>
                                             </div>
@@ -729,18 +664,21 @@
                                             <img src="images/testimonial-quote.svg" alt="">
                                         </div>
                                         <div class="testimonial-content">
-                                            <p>From the moment we walked in, the ambiance was welcoming, and the service was top-notch. The dish was absolutely delicious, full of fresh flavors, and perfectly cooked. I especially loved how the staff took the time to explain the menu and suggest pairings for our meal.</p>
+                                            <p>From the moment we walked in, the ambiance was welcoming, and the service was
+                                                top-notch. The dish was absolutely delicious, full of fresh flavors, and
+                                                perfectly cooked. I especially loved how the staff took the time to explain
+                                                the menu and suggest pairings for our meal.</p>
                                         </div>
                                         <div class="author-info">
                                             <div class="author-image">
                                                 <figure class="image-anime">
                                                     <img src="images/author-2.jpg" alt="">
                                                 </figure>
-                                            </div>            
+                                            </div>
                                             <div class="author-content">
                                                 <h3>liya allen, manager</h3>
                                             </div>
-                                        </div>                                    
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Testimonial Slide End -->
@@ -768,8 +706,11 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">frequently asked questions</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">got questions? we've <span>got answers!</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Whether you're curious about features, pricing, or getting started, we've got you covered. If you don't find what you're looking for, our team is always ready to assist you.</p>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">got questions? we've <span>got
+                                    answers!</span></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Whether you're curious about features, pricing, or
+                                getting started, we've got you covered. If you don't find what you're looking for, our team
+                                is always ready to assist you.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -788,13 +729,17 @@
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp">
                             <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
                                     1. What are your restaurant's opening hours?
                                 </button>
                             </h2>
-                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordion">
+                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+                                data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy delicious meals at your convenience. For special events or holiday hours, please check our website or contact us directly.</p>
+                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy
+                                        delicious meals at your convenience. For special events or holiday hours, please
+                                        check our website or contact us directly.</p>
                                 </div>
                             </div>
                         </div>
@@ -803,13 +748,17 @@
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
                             <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                     2. Do you offer vegetarian or vegan options?
                                 </button>
                             </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion">
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                                data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy delicious meals at your convenience. For special events or holiday hours, please check our website or contact us directly.</p>
+                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy
+                                        delicious meals at your convenience. For special events or holiday hours, please
+                                        check our website or contact us directly.</p>
                                 </div>
                             </div>
                         </div>
@@ -818,13 +767,17 @@
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
                             <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                                     3. Can I make a reservation online?
                                 </button>
                             </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion">
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                                data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy delicious meals at your convenience. For special events or holiday hours, please check our website or contact us directly.</p>
+                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy
+                                        delicious meals at your convenience. For special events or holiday hours, please
+                                        check our website or contact us directly.</p>
                                 </div>
                             </div>
                         </div>
@@ -833,13 +786,17 @@
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
                             <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                     4. Do you provide delivery or takeout services?
                                 </button>
                             </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion">
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                                data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy delicious meals at your convenience. For special events or holiday hours, please check our website or contact us directly.</p>
+                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy
+                                        delicious meals at your convenience. For special events or holiday hours, please
+                                        check our website or contact us directly.</p>
                                 </div>
                             </div>
                         </div>
@@ -848,43 +805,55 @@
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
                             <h2 class="accordion-header" id="heading5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
                                     5. Do you accommodate large groups or private events?
                                 </button>
                             </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion">
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                                data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy delicious meals at your convenience. For special events or holiday hours, please check our website or contact us directly.</p>
+                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy
+                                        delicious meals at your convenience. For special events or holiday hours, please
+                                        check our website or contact us directly.</p>
                                 </div>
                             </div>
                         </div>
                         <!-- FAQ Item End -->
-                        
+
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="1s">
                             <h2 class="accordion-header" id="heading6">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
                                     6. Is there parking available at the restaurant?
                                 </button>
                             </h2>
-                            <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordion">
+                            <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                                data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy delicious meals at your convenience. For special events or holiday hours, please check our website or contact us directly.</p>
+                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy
+                                        delicious meals at your convenience. For special events or holiday hours, please
+                                        check our website or contact us directly.</p>
                                 </div>
                             </div>
                         </div>
                         <!-- FAQ Item End -->
-                        
+
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="1.2s">
                             <h2 class="accordion-header" id="heading7">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
                                     7. Do you have a kids' menu?
                                 </button>
                             </h2>
-                            <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordion">
+                            <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                                data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy delicious meals at your convenience. For special events or holiday hours, please check our website or contact us directly.</p>
+                                    <p>Our restaurant is open daily from 10:00 AM to 10:00 PM, ensuring you can enjoy
+                                        delicious meals at your convenience. For special events or holiday hours, please
+                                        check our website or contact us directly.</p>
                                 </div>
                             </div>
                         </div>
@@ -897,208 +866,4 @@
     </div>
     <!-- Our Faqs Section End -->
 
-    <!-- Reserve Table Section Start -->
-    <div class="reserve-table">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <!-- Reserve table Content Start -->
-                    <div class="reserve-table-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">reserve a table</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">reserve now your table and <span>enjoy dining experience.</span></h2>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Reserve Table Body Start -->
-                        <div class="reserve-table-body wow fadeInUp" data-wow-delay="0.2s">
-                            <h3>open hours</h3>
-                            <ul>
-                                <li>Mon - Thu <span>10:00 AM - 09:00 PM</span></li>
-                                <li>Fri - Sat <span>09:00 AM - 10:00 PM</span></li>
-                                <li>Sun <span>Closed</span></li>
-                            </ul>
-                        </div>
-                        <!-- Reserve Table Body End -->
-                    </div>
-                    <!-- Reserve table Content End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- Reserve Table Form Start -->
-                    <div class="reserve-table-form">
-                        <form id="appointmentForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp">
-                            <div class="row">
-                                <div class="form-group col-md-12 mb-4">
-                                    <label class="form-label">your name</label>
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="e.g. John" required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-                                <div class="form-group col-md-6 mb-4">
-                                    <label class="form-label">email address</label>
-                                    <input type="email" name ="email" class="form-control" id="email" placeholder="e.g. John@example.com" required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                                
-                                <div class="form-group col-md-6 mb-4">
-                                    <label class="form-label">phone number</label>
-                                    <input type="text" name="phone" class="form-control" id="phone" placeholder="e.g. + 123 456 8792" required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-                                <div class="form-group col-md-4 mb-4">
-                                    <label class="form-label">date</label>
-                                    <input type="date" name="date" class="form-control" id="date" required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-                                <div class="form-group col-md-4 mb-4">
-                                    <label class="form-label">time</label>
-                                    <select name="time" class="form-control form-select" id="time" required>
-                                        <option value="" disabled selected>Select time</option>
-                                        <option value="6_30pm">06:30 PM</option>
-                                        <option value="7_00pm">07:00 PM</option>
-                                        <option value="7_30pm">07:30 PM</option>
-                                        <option value="8_00pm">08:00 PM</option>
-                                        <option value="8_30pm">08:30 PM</option>
-                                        <option value="9_00pm">09:00 PM</option>
-                                    </select>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-                                <div class="form-group col-md-4 mb-4">
-                                    <label class="form-label">Number Of Person</label>
-                                    <select name="person" class="form-control form-select" id="person" required>
-                                        <option value="" disabled selected>number of person</option>
-                                        <option value="1_person">1 Person</option>
-                                        <option value="5_person">5 Person</option>
-                                        <option value="10_person">10 Person</option>
-                                        <option value="15_person">15 Person</option>
-                                        <option value="20_person">20 Person</option>
-                                    </select>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-                                <div class="col-lg-12">
-                                    <div class="reserve-table-btn">
-                                        <button type="submit" class="btn-default">reserve now</button>
-                                        <div id="msgSubmit" class="h3 hidden"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Reserve Table Form End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Reserve Table Section End -->
-    
-    <!-- Main Footer Section Start -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <!-- Footer Content Start -->
-                    <div class="footer-content">
-                        <!-- Footer Logo Start -->
-                        <div class="footer-logo">
-                            <img src="images/logo.svg" alt="">
-                        </div>
-                        <!-- Footer Logo End -->
-
-                        <!-- Footer Contact Box Start -->
-                        <div class="footer-contact-box">
-                            <!-- Footer Contact Item Start -->
-                            <div class="footer-contact-item">
-                                <div class="icon-box">
-                                    <img src="images/icon-location.svg" alt="">
-                                </div>
-                                <div class="footer-contact-content">
-                                    <p>4517 Washington Ave, Kentucky 39495</p>
-                                </div>
-                            </div>
-                            <!-- Footer Contact Item End -->
-
-                            <!-- Footer Contact Item Start -->
-                            <div class="footer-contact-item">
-                                <div class="icon-box">
-                                    <img src="images/icon-phone.svg" alt="">
-                                </div>
-                                <div class="footer-contact-content">
-                                    <p><a href="tel:078859632">+01 780 859 632</a></p>
-                                </div>
-                            </div>
-                            <!-- Footer Contact Item End -->
-                        </div>
-                        <!-- Footer Contact Box End -->
-                    </div>
-                    <!-- Footer Content End -->
-                </div>
-            </div>
-
-            <!-- Footer Copyright Section Start -->
-            <div class="footer-copyright">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <!-- Footer Social Icon Start -->
-                        <div class="footer-social-icon">
-                            <ul>
-                                <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- Footer Social Icon End -->
-                    </div>
-
-                    <div class="col-lg-6 col-md-6">
-                        <!-- Footer Copyright Start -->
-                        <div class="footer-copyright-text">
-                            <p>Copyright © 2025 All Rights Reserved.</p>
-                        </div>
-                        <!-- Footer Copyright End -->
-                    </div>
-                </div>
-            </div>
-            <!-- Footer Copyright Section End -->
-        </div>
-    </footer>
-    <!-- Main Footer Section End -->
-
-    <!-- Jquery Library File -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap js file -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Validator js file -->
-    <script src="js/validator.min.js"></script>
-    <!-- SlickNav js file -->
-    <script src="js/jquery.slicknav.js"></script>
-    <!-- Swiper js file -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- Counter js file -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <!-- Magnific js file -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <!-- SmoothScroll -->
-    <script src="js/SmoothScroll.js"></script>
-    <!-- Parallax js -->
-    <script src="js/parallaxie.js"></script>
-    <!-- MagicCursor js file -->
-    <script src="js/gsap.min.js"></script>
-    <script src="js/magiccursor.js"></script>
-    <!-- Text Effect js file -->
-    <script src="js/SplitText.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <!-- YTPlayer js File -->
-    <script src="js/jquery.mb.YTPlayer.min.js"></script>
-    <!-- Wow js file -->
-    <script src="js/wow.min.js"></script>
-    <!-- Main Custom js file -->
-    <script src="js/function.js"></script>
-</body>
-</html>
+@endsection

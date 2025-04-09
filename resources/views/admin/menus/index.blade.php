@@ -40,14 +40,37 @@
                                             @endif
                                         </td>
                                         <td>
-                                            @include('admin.templates.index_actions', [
-                                                'item' => $item,
-                                            ])
+                                            @include('admin.templates.index_actions', ['item' => $item])
                                         </td>
                                     </tr>
                                 @endforeach
                             </tbody>
                         </table>
+
+                        <!-- Custom Pagination -->
+                        <div class="mt-3 d-flex justify-content-center gap-2">
+                            @if ($items->onFirstPage())
+                                <button class="btn btn-secondary" disabled>
+                                    <i class="fa fa-arrow-left me-1"></i> Previous
+                                </button>
+                            @else
+                                <a href="{{ $items->previousPageUrl() }}" class="btn btn-primary">
+                                    <i class="fa fa-arrow-left me-1"></i> Previous
+                                </a>
+                            @endif
+
+                            @if ($items->hasMorePages())
+                                <a href="{{ $items->nextPageUrl() }}" class="btn btn-primary">
+                                    Next <i class="fa fa-arrow-right ms-1"></i>
+                                </a>
+                            @else
+                                <button class="btn btn-secondary" disabled>
+                                    Next <i class="fa fa-arrow-right ms-1"></i>
+                                </button>
+                            @endif
+                        </div>
+                        <!-- End Pagination -->
+
                     </div>
                 </div>
             </div>

@@ -88,4 +88,12 @@
             @endif
         </div>
     </div>
+
+    <!-- Special Menu Checkbox -->
+    <div class="col-lg-12">
+        <div class="form-group">
+            <label for="specialMenu">Special Menu</label>
+            <input type="checkbox" id="specialMenu" name="special_menu" value="1" {{ old('special_menu', $item->special_menu) ? 'checked' : '' }}>
+        </div>
+    </div>
 </div>

@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('slug')->unique();
+            $table->string('slug');
             $table->decimal('price', 8, 2);
             $table->text('description')->nullable();
+            $table->boolean('special_menu')->default(false);
             $table->foreignId('category_id')->constrained('menu_categories')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
