@@ -208,7 +208,7 @@
                             </div>
                             <div class="our-dish-content">
                                 <h3>{{ $menu->name }}</h3>
-                                <p>{{ Str::limit($menu->description, 50) }}</p>
+                                <p>{{ $menu->description }}</p>
                             </div>
                         </div>
                         <!-- Our Dish Item End -->
@@ -555,59 +555,7 @@
                     <!-- Our Ingredients Content End -->
                 </div>
 
-                <div class="col-lg-12 order-3">
-                    <!-- Ingredient Counter List Start -->
-                    <div class="ingredient-counter-list">
-                        <!-- Ingredient Counter Item Start -->
-                        <div class="ingredient-counter-item">
-                            <div class="icon-box">
-                                <img src="images/icon-ingredient-counter-1.svg" alt="">
-                            </div>
-                            <div class="ingredient-counter-content">
-                                <h2><span class="counter">309</span></h2>
-                                <p>Professional chefs</p>
-                            </div>
-                        </div>
-                        <!-- Ingredient Counter Item End -->
 
-                        <!-- Ingredient Counter Item Start -->
-                        <div class="ingredient-counter-item">
-                            <div class="icon-box">
-                                <img src="images/icon-ingredient-counter-2.svg" alt="">
-                            </div>
-                            <div class="ingredient-counter-content">
-                                <h2><span class="counter">453</span></h2>
-                                <p>Items of food</p>
-                            </div>
-                        </div>
-                        <!-- Ingredient Counter Item End -->
-
-                        <!-- Ingredient Counter Item Start -->
-                        <div class="ingredient-counter-item">
-                            <div class="icon-box">
-                                <img src="images/icon-ingredient-counter-3.svg" alt="">
-                            </div>
-                            <div class="ingredient-counter-content">
-                                <h2><span class="counter">25</span>+</h2>
-                                <p>Years of experience</p>
-                            </div>
-                        </div>
-                        <!-- Ingredient Counter Item End -->
-
-                        <!-- Ingredient Counter Item Start -->
-                        <div class="ingredient-counter-item">
-                            <div class="icon-box">
-                                <img src="images/icon-ingredient-counter-4.svg" alt="">
-                            </div>
-                            <div class="ingredient-counter-content">
-                                <h2><span class="counter">300</span>+</h2>
-                                <p>Satisfied clients</p>
-                            </div>
-                        </div>
-                        <!-- Ingredient Counter Item End -->
-                    </div>
-                    <!-- Ingredient Counter List End -->
-                </div>
             </div>
         </div>
     </div>
@@ -671,91 +619,7 @@
     </div>
     <!-- Our Testimonial Section End -->
 
-    <!-- Our Blog Section Start -->
-    <div class="our-blog">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">Latest blog</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Explore our latest news <span>and
-                                updates</span></h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp">
-                        <div class="post-featured-image">
-                            <a href="blog-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/post-1.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="blog-item-body">
-                            <div class="post-item-content">
-                                <h3><a href="blog-single.html">5 Tips for Perfecting Your Home Dining Experience</a></h3>
-                            </div>
-                            <div class="blog-item-btn">
-                                <a href="blog-single.html" class="readmore-btn">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Post Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="post-featured-image">
-                            <a href="blog-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/post-2.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="blog-item-body">
-                            <div class="post-item-content">
-                                <h3><a href="blog-single.html">Why Locally Sourced Ingredients Make a Difference</a></h3>
-                            </div>
-                            <div class="blog-item-btn">
-                                <a href="blog-single.html" class="readmore-btn">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Post Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="post-featured-image">
-                            <a href="blog-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/post-3.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="blog-item-body">
-                            <div class="post-item-content">
-                                <h3><a href="blog-single.html">Creating Memorable Dining Moments with Friends</a></h3>
-                            </div>
-                            <div class="blog-item-btn">
-                                <a href="blog-single.html" class="readmore-btn">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Post Item End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Blog Section End -->
 
 
     </div>

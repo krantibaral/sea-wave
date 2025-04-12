@@ -258,7 +258,7 @@
 		/* Ajax call to submit form */
 		$.ajax({
 			type: "POST",
-			url: "form-appointment.php",
+			url: "{{ route('reservations') }}",
 			data: $appointmentForm.serialize(),
 			success : function(text){
 				if (text === "success"){

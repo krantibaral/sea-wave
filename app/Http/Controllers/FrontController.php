@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Menu;
+use App\Models\Reservation;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Validator;
 
 class FrontController extends Controller
 {
@@ -55,8 +58,13 @@ class FrontController extends Controller
     public function menu()
     {
         $menus = Menu::with('category')->get();
-        return view('front.menu', compact('menus'));
+        $specialMenus = Menu::with('category')
+            ->where('special_menu', true)
+            ->latest()
+            ->get();
+        return view('front.menu', compact('menus', 'specialMenus'));
     }
+
 
 
 
@@ -79,5 +87,43 @@ class FrontController extends Controller
     }
 
 
+    public function store(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:20',
+            'date' => 'required|date|after_or_equal:today',
+            'time' => 'required|date_format:H:i',
+            'person' => 'required|integer|min:1',
+            'accept_terms' => 'accepted',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        Reservation::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'date' => $request->date,
+            'time' => $request->time,
+            'person' => $request->person,
+            'status' => 'pending',
+            'accept_terms' => true,
+        ]);
+
+        return redirect()->back()->with('success', 'Reservation submitted successfully!');
+    }
+
+    // public function store(Request $request)
+    // {
+    //     dd($request->all());
+    // }
+
 
 }
+

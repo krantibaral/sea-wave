@@ -53,6 +53,14 @@
                         <p>Testimonial</p>
                     </a>
                 </li>
+
+                <li class="nav-item {{ request()->is('admin/reservations*') ? 'active' : '' }}">
+                    <a href="{{ route('reservations.index') }}" class="collapsed" aria-expanded="false">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>Reservations</p>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </div>

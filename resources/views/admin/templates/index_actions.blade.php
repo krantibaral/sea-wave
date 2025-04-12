@@ -40,16 +40,19 @@
 <div class="row">
     <div class="col">
         <div class="d-flex align-items-center">
-            @if (!isset($hide_show))
-                <a href="{{ route($route . 'show', $id ?? $item->id) }}" class="btn btn-sm view me-2">
-                    <i class="fa fa-eye"></i>
-                </a>
-            @endif
+            {{-- Check if route is NOT reservations to show View and Edit --}}
+            @if (!request()->routeIs('reservations.*'))
+                @if (!isset($hide_show))
+                    <a href="{{ route($route . 'show', $id ?? $item->id) }}" class="btn btn-sm view me-2">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                @endif
 
-            @if (!isset($hide_edit))
-                <a href="{{ route($route . 'edit', $id ?? $item->id) }}" class="btn btn-sm edit me-2">
-                    <i class="fa fa-edit"></i>
-                </a>
+                @if (!isset($hide_edit))
+                    <a href="{{ route($route . 'edit', $id ?? $item->id) }}" class="btn btn-sm edit me-2">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                @endif
             @endif
 
             @if (!isset($hide_delete))
