@@ -117,7 +117,7 @@
         <div class="footer-content">
           <!-- Footer Logo Start -->
           <div class="footer-logo">
-            <img src="{{ asset('images/logo.svg') }}" alt="Logo">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo" style="width: 60px; height: 60px;">
           </div>
           <!-- Footer Logo End -->
 

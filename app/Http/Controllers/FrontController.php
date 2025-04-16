@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactFormMail;
 
 class FrontController extends Controller
 {
@@ -123,7 +125,19 @@ class FrontController extends Controller
     // {
     //     dd($request->all());
     // }
+    public function submit(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'phone' => 'nullable|string',
+            'message' => 'required|string',
+        ]);
 
+        Mail::to('baralkranti4@gmail.com')->send(new ContactFormMail($validated));
+
+        return back()->with('success', 'Your message has been sent!');
+    }
 
 }
 

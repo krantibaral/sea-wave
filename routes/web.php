@@ -30,3 +30,4 @@ Route::get('/menu-details/{slug}', [FrontController::class, 'menuDetails'])->nam
 Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');
 Route::post('/book-table', [FrontController::class, 'bookTable'])->name('bookTable');
 Route::post('/reservations', [FrontController::class, 'store'])->name('reservations.store');
+Route::post('/contact', [FrontController::class, 'submit'])->name('contact.submit');

@@ -5,8 +5,9 @@
       <div class="container">
         <!-- Logo Start -->
         <a class="navbar-brand" href="./">
-          <img src="{{ asset('images/logo.svg') }}" alt="Logo">
+          <img src="{{ asset('images/logo.png') }}" alt="Logo" style="width: 60px; height: 60px;">
         </a>
+
         <!-- Logo End -->
 
         <!-- Main Menu Start -->
@@ -14,14 +15,14 @@
           <div class="nav-menu-wrapper">
             <ul class="navbar-nav mr-auto" id="menu">
               <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="{{ route('front.about') }}">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ route('front.about') }}">About</a></li>
               <li class="nav-item"><a class="nav-link" href="{{ route('front.menu') }}">Menu</a></li>
-              <li class="nav-item"><a class="nav-link" href="{{ route('front.contact') }}">Contact Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ route('front.contact') }}">Contact</a></li>
             </ul>
           </div>
           <!-- Header Contact Box Start -->
           <div class="header-btn">
-            <a href="{{ url('contact.html') }}" class="btn-default">Book a Table</a>
+            <a href="{{ route('front.contact') }}" class="btn-default">Contact Us</a>
           </div>
           <!-- Header Contact Box End -->
         </div>

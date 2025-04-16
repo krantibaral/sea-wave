@@ -10,10 +10,10 @@
     <meta name="author" content="Awaiken">
 
     <!-- Page Title -->
-    <title>Sea Wave Bistro</title>
+    <title>SeaWave Bistro</title>
 
     <!-- Favicon Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
     <!-- Google Fonts Css -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

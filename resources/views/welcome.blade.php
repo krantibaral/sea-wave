@@ -20,10 +20,10 @@
                         <!-- Section Title End -->
 
                         <!-- Hero Button Start -->
-                        <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
+                        <!-- <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
                             <a href="contact.html" class="btn-default">book a table</a>
                             <a href="#" class="download-app-btn">download app <i class="fa-brands fa-google-play"></i></a>
-                        </div>
+                        </div> -->
                         <!-- Hero Button End -->
                     </div>
                     <!-- Hero Content End -->
@@ -127,8 +127,8 @@
 
                         <!-- About Content Buttons Start -->
                         <div class="about-content-btn wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="contact.html" class="btn-default">order now</a>
-                            <a href="about.html" class="btn-default btn-highlighted">read more</a>
+                            <!-- <a href="contact.html" class="btn-default">order now</a> -->
+                            <a href={{ route('front.about') }} class="btn-default btn-highlighted">read more</a>
                         </div>
                         <!-- About Content Buttons End -->
                     </div>
@@ -293,8 +293,8 @@
 
                         <!-- Daily Offer Button Start -->
                         <div class="daily-offer-btn wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="contact.html" class="btn-default">book table</a>
-                            <a href="menu.html" class="btn-default btn-highlighted">explore menu</a>
+                            <a href="{{ route('front.contact') }}" class="btn-default">book table</a>
+                            <a href="{{ route("front.menu") }}" class="btn-default btn-highlighted">explore menu</a>
                         </div>
                         <!-- Daily Offer Button End -->
                     </div>
@@ -548,7 +548,7 @@
 
                         <!-- Our Ingredients Button Start -->
                         <div class="our-ingredients-btn wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="contact.html" class="btn-default">book table</a>
+                            <!-- <a href="contact.html" class="btn-default">book table</a> -->
                         </div>
                         <!-- Our Ingredients Button End -->
                     </div>
