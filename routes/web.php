@@ -21,7 +21,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('menu-categories', MenuCategoryController::class);
     Route::resource('menus', MenuController::class);
     Route::resource('testimonials', TestimonialController::class);
-    Route::resource('reservations', ReservationController::class);
+    Route::resource('reservation', ReservationController::class);
 });
 
 Route::get('/menu', [FrontController::class, 'menu'])->name('front.menu');

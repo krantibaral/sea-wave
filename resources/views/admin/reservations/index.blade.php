@@ -31,7 +31,7 @@
                                         <td>{{ \Carbon\Carbon::parse($item->time)->format('h:i A') }}</td>
                                         <td>{{ $item->person }}</td>
                                         <td>
-                                            <form action="{{ route('reservations.update', $item->id) }}" method="POST">
+                                            <form action="{{ route('reservation.update', $item->id) }}" method="POST">
                                                 @csrf
                                                 @method('PUT')
                                                 <select name="status" class="form-control form-control-sm"

@@ -54,8 +54,8 @@
                     </a>
                 </li>
 
-                <li class="nav-item {{ request()->is('admin/reservations*') ? 'active' : '' }}">
-                    <a href="{{ route('reservations.index') }}" class="collapsed" aria-expanded="false">
+                <li class="nav-item {{ request()->is('admin/reservation*') ? 'active' : '' }}">
+                    <a href="{{ route('reservation.index') }}" class="collapsed" aria-expanded="false">
                         <i class="fas fa-calendar-alt"></i>
                         <p>Reservations</p>
                     </a>

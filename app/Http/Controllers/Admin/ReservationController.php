@@ -13,7 +13,7 @@ class ReservationController extends BaseController
         parent::__construct();
         $this->title = "Reservation";
         $this->resources = "admin.reservations.";
-        $this->route = "reservations.";
+        $this->route = "reservation.";
     }
 
     /**
