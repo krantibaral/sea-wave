@@ -89,7 +89,7 @@
                         <!-- About Content Buttons Start -->
                         <div class="about-content-btn wow fadeInUp" data-wow-delay="0.6s">
                             <!-- <a href="contact.html" class="btn-default">order now</a> -->
-                            <a href="{{ route('front.contact') }}" class="btn-default btn-highlighted">book a table</a>
+                            <a href="{{ route('front.contact') }}" class="btn-default btn-highlighted">contact us</a>
                         </div>
                         <!-- About Content Buttons End -->
                     </div>

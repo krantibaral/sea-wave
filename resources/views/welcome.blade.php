@@ -291,14 +291,12 @@
                         </div>
                         <!-- Daily Offer List End -->
 
-                        <!-- Daily Offer Button Start -->
                         <div class="daily-offer-btn wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="{{ route('front.contact') }}" class="btn-default">book table</a>
+                          
                             <a href="{{ route("front.menu") }}" class="btn-default btn-highlighted">explore menu</a>
                         </div>
-                        <!-- Daily Offer Button End -->
+                    
                     </div>
-                    <!-- Daily Offer Content End -->
                 </div>
             </div>
         </div>

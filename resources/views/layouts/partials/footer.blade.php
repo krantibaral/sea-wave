@@ -117,7 +117,7 @@
         <div class="footer-content">
           <!-- Footer Logo Start -->
           <div class="footer-logo">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo" style="width: 60px; height: 60px;">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo" style="width: 80px; height: 80px;">
           </div>
           <!-- Footer Logo End -->
 
@@ -170,6 +170,7 @@
           <!-- Footer Copyright Start -->
           <div class="footer-copyright-text">
             <p>Copyright © 2025 All Rights Reserved.</p>
+            <p>Developed By <a href="https://www.ableinnovation.com.np" target="_blank">Able Innovation</a></p>
           </div>
           <!-- Footer Copyright End -->
         </div>

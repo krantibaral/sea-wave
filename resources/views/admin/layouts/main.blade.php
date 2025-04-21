@@ -2,16 +2,9 @@
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Sea Wave Bistro</title>
-    <meta
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-      name="viewport"
-    />
-    <link
-      rel="icon"
-      href="{{ asset('favicon.ico') }}"
-      type="image/x-icon"
-    />
+    <title>SeaWave Bistro</title>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
 
     <!-- Fonts and icons -->
     <script src="{{ asset('assets/js/plugin/webfont/webfont.min.js')}}"></script>
@@ -37,9 +30,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/plugins.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/kaiadmin.min.css') }}" />
-
-    {{--  <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" /> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" /> --}}
   </head>
+
   <body>
     <div class="wrapper">
       <!-- Sidebar -->
@@ -53,13 +46,13 @@
           @yield('content')
         </div>
 
-       @include('admin.layouts.partials.footer')
+        @include('admin.layouts.partials.footer')
       </div>
 
-     @include('admin.layouts.partials.custom_settings')
-      <!-- End Custom template -->
+      @include('admin.layouts.partials.custom_settings')
     </div>
-    <!--   Core JS Files   -->
+
+    <!-- Core JS Files -->
     <script src="{{ asset('assets/js/core/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
@@ -92,8 +85,11 @@
     <!-- Kaiadmin JS -->
     <script src="{{ asset('assets/js/kaiadmin.min.js') }}"></script>
 
-     {{-- <script src="{{ asset('assets/js/setting-demo.js') }}"></script> --}}
-     {{-- <script src="{{ asset('assets/js/demo.js') }}"></script> --}}
+    {{-- Optional Demo Scripts --}}
+    {{-- <script src="{{ asset('assets/js/setting-demo.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/js/demo.js') }}"></script> --}}
+
+    <!-- Example Sparkline Charts -->
     <script>
       $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
         type: "line",
@@ -122,5 +118,9 @@
         fillColor: "rgba(255, 165, 52, .14)",
       });
     </script>
+
+    <!-- Push custom scripts from child views -->
+    @stack('scripts')
+
   </body>
 </html>

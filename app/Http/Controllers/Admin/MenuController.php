@@ -48,7 +48,7 @@ class MenuController extends BaseController
             $existingMenu = Menu::where('slug', $slug)->first();
 
             if ($existingMenu) {
-                $slug = $slug . '-' . Str::random(5); 
+                $slug = $slug . '-' . Str::random(5);
             }
 
             $menu = new Menu();
@@ -63,6 +63,10 @@ class MenuController extends BaseController
 
             if ($request->hasFile('food_image')) {
                 $menu->addMediaFromRequest('food_image')->toMediaCollection('food_images');
+            }
+
+            if ($request->hasFile('banner_image')) {
+                $menu->addMediaFromRequest('banner_image')->toMediaCollection('banner_images');
             }
 
             return redirect()->route($this->indexRoute())

@@ -14,13 +14,13 @@
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h3 class="card-title">{{ $title . ' Details' }}</h3>
                             <div class="btn-group">
-
-
-                                <a href="{{ route($route . 'create') }}" class="btn btn-primary d-flex align-items-center">
-                                    <i class="fa fa-plus me-2"></i>
-                                    <span class="kt-hidden-mobile">Add new</span>
-                                </a>
-
+                                <!-- Conditionally hide the "Add new" button if the route is 'reservation' -->
+                                @unless(Route::is('reservation*'))
+                                    <a href="{{ route($route . 'create') }}" class="btn btn-primary d-flex align-items-center">
+                                        <i class="fa fa-plus me-2"></i>
+                                        <span class="kt-hidden-mobile">Add new</span>
+                                    </a>
+                                @endunless
                             </div>
                         </div>
                         <!-- /.card-header -->

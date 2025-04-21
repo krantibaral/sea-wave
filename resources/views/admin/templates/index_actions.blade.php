@@ -41,7 +41,7 @@
     <div class="col">
         <div class="d-flex align-items-center">
             {{-- Check if route is NOT reservations to show View and Edit --}}
-            @if (!request()->routeIs('reservations.*'))
+            @if (!request()->routeIs('reservation.*'))
                 @if (!isset($hide_show))
                     <a href="{{ route($route . 'show', $id ?? $item->id) }}" class="btn btn-sm view me-2">
                         <i class="fa fa-eye"></i>

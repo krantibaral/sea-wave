@@ -88,7 +88,7 @@
                         </div>
                         <!-- Header Contact Box Start -->
                         <div class="header-btn">
-                            <a href="contact.html" class="btn-default">book a table</a>
+                            <a href="contact.html" class="btn-default">contact us</a>
                         </div>
                         <!-- Header Contact Box End -->
 					</div>

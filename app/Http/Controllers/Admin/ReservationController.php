@@ -52,4 +52,13 @@ class ReservationController extends BaseController
         return redirect()->route($this->indexRoute())
             ->with('success', 'Reservation status updated successfully.');
     }
+
+    public function destroy($id)
+    {
+        $item = Reservation::findOrFail($id);
+        $item->delete();
+
+        return redirect()->route($this->indexRoute())
+            ->with('success', 'Reservation deleted successfully.');
+    }
 }
