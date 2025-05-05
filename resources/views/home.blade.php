@@ -59,7 +59,7 @@
                     <div class="text-center py-5">
                         <i class="fas fa-utensils fa-3x text-muted mb-3"></i>
                         <h5 class="text-muted">No special menus available today</h5>
-                        <a href="{{ route('admin.menus.create') }}" class="btn btn-primary mt-3">Add New Menu</a>
+                        <a href="{{ route('menus.create') }}" class="btn btn-primary mt-3">Add New Menu</a>
                     </div>
                 @endif
             </div>
