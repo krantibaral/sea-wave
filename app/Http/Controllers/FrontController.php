@@ -54,6 +54,12 @@ class FrontController extends Controller
         return view('front.404');
     }
 
+
+    public function under_maintenance()
+    {
+        return view('front.under_maintenance');
+    }
+
     /**
      * Show the Menu partial view.
      */
