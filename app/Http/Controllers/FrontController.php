@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Menu;
 use App\Models\Reservation;
+use App\Models\StoreDetails;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -29,10 +30,11 @@ class FrontController extends Controller
             ->get();
 
         $testimonials = Testimonial::latest()->get();
+        $storeDetails = StoreDetails::first();
 
 
 
-        return view('welcome', compact('menus', 'specialMenus', 'testimonials', 'groupedMenus'));
+        return view('welcome', compact('menus', 'specialMenus', 'testimonials', 'groupedMenus', 'storeDetails'));
     }
 
 
@@ -91,8 +93,10 @@ class FrontController extends Controller
 
     public function contact()
     {
-        return view('front.contact');
+        $storeDetails = StoreDetails::first();
+        return view('front.contact', compact('storeDetails'));
     }
+
 
 
     public function store(Request $request)
@@ -140,9 +144,9 @@ class FrontController extends Controller
             'message' => 'required|string',
         ]);
 
-        Mail::to('baralkranti4@gmail.com')->send(new ContactFormMail($validated));
+        Mail::to('seawavebistro@gmail.com')->send(new ContactFormMail($validated));
 
-        return back()->with('success', 'Your message has been sent!');
+        return back();
     }
 
 }

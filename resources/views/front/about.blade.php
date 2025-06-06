@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
     <!-- Page Header Start -->
     <div class="page-header parallaxie">
         <div class="container">
@@ -33,13 +32,13 @@
                         <!-- About Us Img Start -->
                         <div class="about-us-img">
                             <figure class="image-anime">
-                                <img src="images/about-us-image.jpg" alt="">
+                                <img src="images/hero-bg.jpg" alt="">
                             </figure>
                         </div>
                         <!-- About Us Img End -->
 
                         <!-- Company Experience Box Start -->
-                        <div class="company-experience">
+                        {{-- <div class="company-experience">
                             <div class="icon-box">
                                 <img src="images/icon-company-experience.svg" alt="">
                             </div>
@@ -47,13 +46,13 @@
                             <div class="company-experience-content">
                                 <h3><span class="counter">30</span>+ years of experience</h3>
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- Company Experience Box End -->
 
                         <!-- About Author Image Start -->
                         <div class="about-author-img">
                             <figure class="image-anime">
-                                <img src="images/about-us-img-2.jpg" alt="">
+                                <img src="images/logo.png" alt="">
                             </figure>
                         </div>
                         <!-- About Author Image End -->
@@ -64,24 +63,48 @@
                 <div class="col-lg-6  order-lg-2 order-1">
                     <!-- About Us Content Start -->
                     <div class="about-us-content">
+
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">about us</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Our Commitment to Authenticity &
-                                <span>excellence</span>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Street Food with
+                                <span>Beachside Twist</span>
                             </h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Every dish we create is a celebration of
-                                connection, crafted with passion and inspired by diverse flavors. Join us in an inviting
-                                space where every bite sparks joy and every moment becomes a cherished memory.</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">SeaWave Bistro is all about bold flavours, fresh
+                                ingredients, and good vibes. Inspired by global street food and the laid-back beachside
+                                lifestyle, we serve delicious meals that are made to enjoy in the moment — whether you're
+                                walking barefoot in the sand or dancing under the stars.
+                            </p>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Our menu blends creative takes on classic street
+                                food with seasonal favourites, always prepared fresh and served with a smile. From juicy
+                                burgers and fusion wraps to loaded fries and sweet treats, every bite brings something new
+                                to the table.
+                            </p>
+                        </div>
+                        <!-- Section Title End -->
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            {{-- <h3 class="wow fadeInUp">about us</h3> --}}
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Catering That Brings the Flavor
+
+                            </h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Looking to make your event unforgettable? SeaWave
+                                Bistro offers a full-service catering experience with the same flavour-packed food and
+                                relaxed vibe you get from our food truck. Perfect for parties, weddings, corporate
+                                gatherings, and festivals — we tailor our menu to suit your taste, theme, and dietary needs.
+                            </p>
+
                         </div>
                         <!-- Section Title End -->
 
                         <!-- About Content List Start -->
                         <div class="about-content-list wow fadeInUp" data-wow-delay="0.4s">
                             <ul>
-                                <li>seasonal & locally sourced ingredients</li>
-                                <li>vegetarian & dietary-friendly options</li>
-                                <li>exquisite pairings & unique flavors</li>
+                                <li>Fresh, made-to-order food</li>
+                                <li>Unique, flavourful menu options</li>
+                                <li>Friendly, reliable service</li>
+                                <li>Custom catering for events of any size</li>
+
                             </ul>
                         </div>
                         <!-- About Content List End -->
@@ -105,8 +128,8 @@
                                 <img src="images/icon-about-detail-1.svg" alt="">
                             </div>
                             <div class="about-detail-content">
-                                <h3>premium dining</h3>
-                                <p>It's very personal, and can only be a positive experience.</p>
+                                <h3>Catering, the SeaWave Way</h3>
+                                <p>Crafted with care, served with style, and always full of flavour.</p>
                             </div>
                         </div>
                         <!-- About Detail Item End -->
@@ -117,8 +140,8 @@
                                 <img src="images/icon-about-detail-2.svg" alt="">
                             </div>
                             <div class="about-detail-content">
-                                <h3>abundant flavors</h3>
-                                <p>At secret recipe, we take immense pride in crafting.</p>
+                                <h3>Wave of Flavours</h3>
+                                <p>At SeaWave Bistro, every dish is crafted with passion and a punch of bold taste.</p>
                             </div>
                         </div>
                         <!-- About Detail Item End -->
@@ -129,8 +152,8 @@
                                 <img src="images/icon-about-detail-3.svg" alt="">
                             </div>
                             <div class="about-detail-content">
-                                <h3>indigenous meal</h3>
-                                <p>With local ingredients, unique spins on traditional flavors.</p>
+                                <h3>Locally Inspired</h3>
+                                <p>We fuse fresh local ingredients with street-style creativity and global flair.</p>
                             </div>
                         </div>
                         <!-- About Detail Item End -->
@@ -150,8 +173,8 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">our approach</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Delivering memorable dining
-                            <span>experiences</span>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Bringing the Bistro to Your Event —
+                            <span>Flavour, Fun, and Vibes.</span>
                         </h2>
                     </div>
                     <!-- Section Title End -->
@@ -172,7 +195,8 @@
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="vision-tab" data-bs-toggle="tab" data-bs-target="#vision"
-                                        type="button" role="tab" aria-selected="false">our vision</button>
+                                        type="button" role="tab" aria-selected="false">our
+                                        vision</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="value-tab" data-bs-toggle="tab" data-bs-target="#value"
@@ -193,22 +217,25 @@
                                             <!-- Section Title Start -->
                                             <div class="section-title">
                                                 <h3 class="wow fadeInUp">our mission</h3>
-                                                <h2 class="text-anime-style-2" data-cursor="-opaque">creating moments around
-                                                    flavor</h2>
-                                                <p class="wow fadeInUp" data-wow-delay="0.2s">At SpicyHunt, our vision is to
-                                                    redefine the dining experience by bringing people together over
-                                                    authentic, flavorful meals crafted with love and passion. We aim to be a
-                                                    beacon of culinary excellence, where every dish tells a story of
-                                                    tradition, innovation, and uncompromising quality.</p>
+                                                <h2 class="text-anime-style-2" data-cursor="-opaque">Creating Memorable
+                                                    Moments Through Flavor and Vibe</h2>
+                                                <p class="wow fadeInUp" data-wow-delay="0.2s">At SeaWave Bistro, our
+                                                    mission is to serve bold, flavour-packed street food and deliver
+                                                    unforgettable catering experiences that bring people together. Whether
+                                                    you’re enjoying a beachside bite or booking us for a special event,
+                                                    we’re here to make every moment delicious and meaningful.</p>
                                             </div>
                                             <!-- Section Title End -->
 
                                             <!-- Approch Tab Content List Start -->
                                             <div class="approch-tab-content-list wow fadeInUp" data-wow-delay="0.4s">
                                                 <ul>
-                                                    <li>Delivering unforgettable flavors with every dish we serve.</li>
-                                                    <li>Creating a welcoming space where food connects hearts.</li>
-                                                    <li>Committed to quality, innovation, and exceptional service.</li>
+                                                    <li>Serving vibrant street eats made with fresh, quality ingredients.
+                                                    </li>
+                                                    <li>Providing personalised, flavour-driven catering for events big and
+                                                        small.</li>
+                                                    <li>Staying true to creativity, great service, and a relaxed beachside
+                                                        spirit.</li>
                                                 </ul>
                                             </div>
                                             <!-- Approch Tab Content List End -->
@@ -219,7 +246,7 @@
                                         <!-- Approch Tab Image Start -->
                                         <div class="approch-tab-image">
                                             <figure class="image-anime">
-                                                <img src="images/our-mission-img.jpg" alt="">
+                                                <img src="images/vision1.jpg" alt="">
                                             </figure>
                                         </div>
                                         <!-- Approch Tab Image End -->
@@ -237,20 +264,25 @@
                                             <!-- Section Title Start -->
                                             <div class="section-title">
                                                 <h3>our vision</h3>
-                                                <h2 data-cursor="-opaque">creating moments around flavor</h2>
-                                                <p>At SpicyHunt, our vision is to redefine the dining experience by bringing
-                                                    people together over authentic, flavorful meals crafted with love and
-                                                    passion. We aim to be a beacon of culinary excellence, where every dish
-                                                    tells a story of tradition, innovation, and uncompromising quality.</p>
+                                                <h2 data-cursor="-opaque">Crafting Connections Through Flavour and
+                                                    Experience</h2>
+                                                <p>At SeaWave Bistro, our vision is to bring people together through bold,
+                                                    unforgettable food — served beachside or at events that matter. We aim
+                                                    to redefine casual dining and catering by blending vibrant flavours,
+                                                    creative flair, and heartfelt hospitality.</p>
                                             </div>
                                             <!-- Section Title End -->
 
                                             <!-- Approch Tab Content List Start -->
                                             <div class="approch-tab-content-list">
                                                 <ul>
-                                                    <li>Delivering unforgettable flavors with every dish we serve.</li>
-                                                    <li>Creating a welcoming space where food connects hearts.</li>
-                                                    <li>Committed to quality, innovation, and exceptional service.</li>
+                                                    <li>Delivering flavour-packed meals that leave lasting impressions.
+
+                                                    </li>
+                                                    <li>Creating joyful, welcoming moments through every bite and gathering.
+                                                    </li>
+                                                    <li>Committed to quality, innovation, and exceptional catering service.
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <!-- Approch Tab Content List End -->
@@ -261,7 +293,7 @@
                                         <!-- Approch Tab Image Start -->
                                         <div class="approch-tab-image">
                                             <figure class="image-anime">
-                                                <img src="images/our-vision-img.jpg" alt="">
+                                                <img src="images/vision2.jpg" alt="">
                                             </figure>
                                         </div>
                                         <!-- Approch Tab Image End -->
@@ -279,20 +311,23 @@
                                             <!-- Section Title Start -->
                                             <div class="section-title">
                                                 <h3>our value</h3>
-                                                <h2 data-cursor="-opaque">creating moments around flavor</h2>
-                                                <p>At SpicyHunt, our vision is to redefine the dining experience by bringing
-                                                    people together over authentic, flavorful meals crafted with love and
-                                                    passion. We aim to be a beacon of culinary excellence, where every dish
-                                                    tells a story of tradition, innovation, and uncompromising quality.</p>
+                                                <h2 data-cursor="-opaque">Bringing People Together, One Flavorful Moment at
+                                                    a Time</h2>
+                                                <p>At SeaWave Bistro, we believe that great food is more than just a meal —
+                                                    it’s a way to connect, celebrate, and create memories. Our values guide
+                                                    everything we do, from the freshest ingredients to the friendliest
+                                                    service.</p>
                                             </div>
                                             <!-- Section Title End -->
 
                                             <!-- Approch Tab Content List Start -->
                                             <div class="approch-tab-content-list">
                                                 <ul>
-                                                    <li>Delivering unforgettable flavors with every dish we serve.</li>
-                                                    <li>Creating a welcoming space where food connects hearts.</li>
-                                                    <li>Committed to quality, innovation, and exceptional service.</li>
+                                                    <li>Delivering bold, unforgettable flavours with every dish.</li>
+                                                    <li>Creating a warm, welcoming experience where food brings people
+                                                        closer.</li>
+                                                    <li>Committed to quality, creativity, and exceptional catering service.
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <!-- Approch Tab Content List End -->
@@ -303,7 +338,7 @@
                                         <!-- Approch Tab Image Start -->
                                         <div class="approch-tab-image">
                                             <figure class="image-anime">
-                                                <img src="images/our-value-img.jpg" alt="">
+                                                <img src="images/vision3.jpg" alt="">
                                             </figure>
                                         </div>
                                         <!-- Approch Tab Image End -->
@@ -322,7 +357,7 @@
     <!-- Our Approach Section End -->
 
     <!-- Daily Offer Section Start -->
-    <div class="daily-offer">
+    {{-- <div class="daily-offer">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -395,7 +430,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Daily Offer Section End -->
 
     <!-- Intro Video Section Start -->
@@ -433,7 +468,7 @@
     <!-- Intro Video Section End -->
 
     <!-- Our Team Section Start -->
-    <div class="our-team">
+    {{-- <div class="our-team">
         <div class="container">
             <div class="row section-row">
                 <div class="col-lg-12">
@@ -607,7 +642,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Our Team Section End -->
-
 @endsection

@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
     <!-- Page Header Start -->
     <div class="page-header parallaxie">
         <div class="container">
@@ -34,18 +33,18 @@
                         <div class="section-title">
                             <h3 class="wow fadeInUp">contact us</h3>
                             <h2 class="text-anime-style-2" data-cursor="-opaque">Get in touch <span>with us</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Have questions or feedback? Reach out to us
-                                through the form below, call us, or visit our restaurant. We're here to help and look
-                                forward to connecting with you!</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Have a question, craving, or event in mind? We’d
+                                love to hear from you! Whether you’re looking to book our food truck, plan catering, or just
+                                say hello — we’re here and ready to chat.</p>
                         </div>
                         <!-- Section Title End -->
 
                         <!-- Contact Info List Start -->
                         <div class="contact-info-list wow fadeInUp" data-wow-delay="0.4s">
                             <ul>
-                                <li>27 Division St, New York, NY 10002, USA</li>
-                                <li><a href="tel:780859632">+01 780 859 632</a></li>
-                                <li><a href="#">info@domainname.com</a></li>
+                                <li>North Esplanade Glenelg North Adeliade South Australia</li>
+                                <li><a href="tel:+61 432081334">+61 432 081 334</a></li>
+                                <li><a href="#">seawavebistro@gmail.com</a></li>
                             </ul>
                         </div>
                         <!-- Contact Info List End -->
@@ -115,16 +114,18 @@
             <div class="row">
                 <div class="col-lg-12">
                     <!-- Google Map Start -->
-                    <div class="google-map-iframe">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96737.10562045308!2d-74.08535042841811!3d40.739265258395164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1703158537552!5m2!1sen!2sin"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                    @if (!empty($storeDetails->map_link))
+                        <div class="google-map-iframe">
+                            <iframe src="{{ $storeDetails->map_link }}" width="600" height="450" style="border:0;"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    @endif
+
+
                     <!-- Google Map End -->
                 </div>
             </div>
         </div>
     </div>
     <!-- Google Map End -->
-
 @endsection

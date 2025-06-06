@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\MenuCategoryController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ReservationController;
+use App\Http\Controllers\Admin\StoreDetailsController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('menus', MenuController::class);
     Route::resource('testimonials', TestimonialController::class);
     Route::resource('reservation', ReservationController::class);
+    Route::resource('store-details', StoreDetailsController::class);
 });
 
 Route::get('/menu', [FrontController::class, 'menu'])->name('front.menu');
@@ -30,4 +32,6 @@ Route::get('/menu-details/{slug}', [FrontController::class, 'menuDetails'])->nam
 Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');
 Route::post('/book-table', [FrontController::class, 'bookTable'])->name('bookTable');
 Route::post('/reservations', [FrontController::class, 'store'])->name('reservations.store');
-Route::get('/under-maintenance', [FrontController::class, 'under_maintenance'])->name('fronshowt.under_maintenance');
+// Route::get('/under-maintenance', [FrontController::class, 'under_maintenance'])->name('fronshowt.under_maintenance');
+Route::post('/contact', [FrontController::class, 'submit'])->name('contact.submit');
+
