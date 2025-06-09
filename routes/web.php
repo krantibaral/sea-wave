@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\CateringMenuCategoryController;
+use App\Http\Controllers\Admin\CateringMenuController;
+use App\Http\Controllers\Admin\FoodTruckCategoryController;
+use App\Http\Controllers\Admin\FoodTruckMenuController;
 use App\Http\Controllers\Admin\MenuCategoryController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ReservationController;
@@ -24,6 +28,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('testimonials', TestimonialController::class);
     Route::resource('reservation', ReservationController::class);
     Route::resource('store-details', StoreDetailsController::class);
+    Route::resource('catering-menu-categories', CateringMenuCategoryController::class);
+    Route::resource('catering-menus', CateringMenuController::class);
+    Route::resource('food-truck-categories', FoodTruckCategoryController::class);
+    Route::resource('food-truck-menus', FoodTruckMenuController::class);
 });
 
 Route::get('/menu', [FrontController::class, 'menu'])->name('front.menu');

@@ -22,9 +22,9 @@
                         <!-- Section Title End -->
                         <!-- Hero Button Start -->
                         <!-- <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
-                                                                                                                                                                                                                                                <a href="contact.html" class="btn-default">book a table</a>
-                                                                                                                                                                                                                                                <a href="#" class="download-app-btn">download app <i class="fa-brands fa-google-play"></i></a>
-                                                                                                                                                                                                                                                </div> -->
+                                                                                                                                                                                                                                                    <a href="contact.html" class="btn-default">book a table</a>
+                                                                                                                                                                                                                                                    <a href="#" class="download-app-btn">download app <i class="fa-brands fa-google-play"></i></a>
+                                                                                                                                                                                                                                                    </div> -->
                         <!-- Hero Button End -->
                     </div>
                     <!-- Hero Content End -->
@@ -201,16 +201,29 @@
 
             <div class="row">
                 @foreach ($specialMenus as $key => $menu)
+                    @php
+                        $category = $menu->category;
+                        $categoryImage = null;
+
+                        if ($menu instanceof \App\Models\CateringMenu && $category) {
+                            $categoryImage = $category->getFirstMediaUrl('catering_menu_category_images');
+                        } elseif ($menu instanceof \App\Models\FoodTruckMenu && $category) {
+                            $categoryImage = $category->getFirstMediaUrl('food_truck_category_images');
+                        }
+
+                        $imageUrl = $categoryImage ?: asset('images/default.jpg');
+                    @endphp
+
                     <div class="col-lg-3 col-md-6">
                         <!-- Our Dish Item Start -->
                         <div class="our-dish-item wow fadeInUp" data-wow-delay="{{ $key * 0.2 }}s">
                             <div class="our-dish-img">
-                                <figure class="image-anime">
-                                    <img src="{{ $menu->getFirstMediaUrl('banner_images') }}" alt="{{ $menu->name }}">
+                                <figure class="image-anime mb-3">
+                                    <img src="{{ $imageUrl }}" alt="{{ $menu->name }}" class="img-fluid rounded">
                                 </figure>
                             </div>
                             <div class="our-dish-content">
-                                <h3>{{ $menu->name }}</h3>
+                                <h3>{{ $menu->menu_name }}</h3>
                                 <p>{{ $menu->description }}</p>
                             </div>
                         </div>
@@ -227,6 +240,7 @@
                 </div>
             </div>
 
+
         </div>
     </div>
     <!-- Our Dishes Section End -->
@@ -241,7 +255,7 @@
                         <div class="daily-offer-img">
                             <figure>
                                 <img src="
-                                    images/cateern.jpg" alt="">
+                                        images/cateern.jpg" alt="">
                             </figure>
                         </div>
 
@@ -406,34 +420,34 @@
 
     <!-- Intro Video Section Start -->
     <!-- <div class="intro-video">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-               
-                    <div class="intro-video-box">
-                        <div class="intro-bg-video">
-                           
-                            <video autoplay muted loop id="myVideo">
-                                <source src="https://demo.awaikenthemes.com/assets/videos/spicyhunt-intro-bg-video.mp4"
-                                    type="video/mp4">
-                            </video>
-                          
-                        </div>
-                     
-                        <div class="video-play-button">
-                            <a href="{{ $storeDetails->youtube_link ?? 'https://www.youtube.com/watch?v=ASrDoN2YsYc' }}"
-                                class="popup-video" data-cursor-text="Play">
-                                play
-                            </a>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="intro-video-box">
+                            <div class="intro-bg-video">
+
+                                <video autoplay muted loop id="myVideo">
+                                    <source src="https://demo.awaikenthemes.com/assets/videos/spicyhunt-intro-bg-video.mp4"
+                                        type="video/mp4">
+                                </video>
+
+                            </div>
+
+                            <div class="video-play-button">
+                                <a href="{{ $storeDetails->youtube_link ?? 'https://www.youtube.com/watch?v=ASrDoN2YsYc' }}"
+                                    class="popup-video" data-cursor-text="Play">
+                                    play
+                                </a>
+                            </div>
+
+
                         </div>
 
-                
                     </div>
-                
                 </div>
             </div>
-        </div>
-    </div> -->
+        </div> -->
     <!-- Intro Video Section End -->
 
     <!-- Our Ingredients Section Start -->

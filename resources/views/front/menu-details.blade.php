@@ -48,19 +48,14 @@
                                 <!-- Our Menu Item Start -->
                                 <div class="our-menu-item wow fadeInUp" data-wow-delay="0.4s">
                                     <!-- Our Menu Image Start -->
-                                    <div class="our-menu-image">
-                                        <figure>
-                                        <img src="{{ $menu->getFirstMediaUrl('food_images') ?: asset('images/default.jpg') }}"
-                                        alt="{{ $categoryName }}">
-                                        </figure>
-                                    </div>
+                                 
                                     <!-- Our Menu Image End -->
 
                                     <!-- Menu Item Body Start -->
                                     <div class="menu-item-body">
                                         <!-- Menu Item Title Start -->
                                         <div class="menu-item-title">
-                                            <h3>{{ $menu->name }}</h3>
+                                            <h3>{{ $menu->menu_name }}</h3>
                                             <hr>
                                             <span>${{ number_format($menu->price, 2) }}</span>
                                         </div>

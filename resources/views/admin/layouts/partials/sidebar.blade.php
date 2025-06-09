@@ -35,16 +35,28 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item {{ request()->is('admin/menu-categories*') ? 'active' : '' }}">
-                    <a href="{{ route('menu-categories.index') }}" class="collapsed" aria-expanded="false">
+                <li class="nav-item {{ request()->is('admin/catering-menu-categories*') ? 'active' : '' }}">
+                    <a href="{{ route('catering-menu-categories.index') }}" class="collapsed" aria-expanded="false">
                         <i class="fas fa-layer-group"></i>
-                        <p>Menu Category</p>
+                        <p>Catering Menu Category</p>
                     </a>
                 </li>
-                <li class="nav-item {{ request()->is('admin/menus*') ? 'active' : '' }}">
-                    <a href="{{ route('menus.index') }}" class="collapsed" aria-expanded="false">
+                <li class="nav-item {{ request()->is('admin/catering-menus*') ? 'active' : '' }}">
+                    <a href="{{ route('catering-menus.index') }}" class="collapsed" aria-expanded="false">
                         <i class="fas fa-utensils"></i>
-                        <p>Menu</p>
+                        <p>Catering Menu</p>
+                    </a>
+                </li>
+                <li class="nav-item {{ request()->is('admin/food-truck-categories*') ? 'active' : '' }}">
+                    <a href="{{ route('food-truck-categories.index') }}" class="collapsed" aria-expanded="false">
+                        <i class="fas fa-layer-group"></i>
+                        <p>Food Truck Menu Category</p>
+                    </a>
+                </li>
+                <li class="nav-item {{ request()->is('admin/food-truck-menus*') ? 'active' : '' }}">
+                    <a href="{{ route('food-truck-menus.index') }}" class="collapsed" aria-expanded="false">
+                        <i class="fas fa-utensils"></i>
+                        <p>Food Truck Menu</p>
                     </a>
                 </li>
                 <li class="nav-item {{ request()->is('admin/testimonials*') ? 'active' : '' }}">

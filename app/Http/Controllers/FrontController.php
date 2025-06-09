@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CateringMenu;
+use App\Models\CateringMenuCategory;
+use App\Models\FoodTruckCategory;
+use App\Models\FoodTruckMenu;
 use App\Models\Menu;
 use App\Models\Reservation;
 use App\Models\StoreDetails;
@@ -23,11 +27,24 @@ class FrontController extends Controller
         $groupedMenus = $menus->groupBy(function ($menu) {
             return optional($menu->category)->category_name ?? 'Uncategorized';
         });
-        $specialMenus = Menu::with('category')
+        $cateringSpecialMenus = CateringMenu::with('category')
             ->where('special_menu', true)
             ->latest()
             ->take(4)
             ->get();
+
+
+        $foodTruckSpecialMenus = FoodTruckMenu::with('category')
+            ->where('special_menu', true)
+            ->latest()
+            ->take(4)
+            ->get();
+
+        $specialMenus = $cateringSpecialMenus
+            ->merge($foodTruckSpecialMenus)
+            ->sortByDesc('created_at')
+            ->take(4)
+            ->values();
 
         $testimonials = Testimonial::latest()->get();
         $storeDetails = StoreDetails::first();
@@ -67,12 +84,30 @@ class FrontController extends Controller
      */
     public function menu()
     {
-        $menus = Menu::with('category')->get();
-        $specialMenus = Menu::with('category')
+
+        $cateringSpecialMenus = CateringMenu::with('category')
             ->where('special_menu', true)
             ->latest()
+            ->take(4)
             ->get();
-        return view('front.menu', compact('menus', 'specialMenus'));
+
+
+        $foodTruckSpecialMenus = FoodTruckMenu::with('category')
+            ->where('special_menu', true)
+            ->latest()
+            ->take(4)
+            ->get();
+
+        $specialMenus = $cateringSpecialMenus
+            ->merge($foodTruckSpecialMenus)
+            ->sortByDesc('created_at')
+            ->take(4)
+            ->values();
+
+        $cateringCategories = CateringMenuCategory::all();
+        $foodTruckCategories = FoodTruckCategory::all();
+
+        return view('front.menu', compact('specialMenus', 'cateringCategories', 'foodTruckCategories'));
     }
 
 
@@ -80,15 +115,29 @@ class FrontController extends Controller
 
     public function menuDetails($slug)
     {
-        $menus = Menu::with('category')
-            ->whereHas('category', function ($query) use ($slug) {
-                $query->where('category_name', 'LIKE', str_replace('-', ' ', $slug));
-            })->get();
-
         $categoryName = ucwords(str_replace('-', ' ', $slug));
+
+
+        $cateringCategory = CateringMenuCategory::where('category_name', 'LIKE', $categoryName)->first();
+        $cateringMenus = $cateringCategory
+            ? CateringMenu::with('category')
+                ->where('catering_menu_category_id', $cateringCategory->id)
+                ->get()
+            : collect();
+
+
+        $foodTruckCategory = FoodTruckCategory::where('category_name', 'LIKE', $categoryName)->first();
+        $foodTruckMenus = $foodTruckCategory
+            ? FoodTruckMenu::with('category')
+                ->where('food_truck_category_id', $foodTruckCategory->id)
+                ->get()
+            : collect();
+
+        $menus = $cateringMenus->merge($foodTruckMenus);
 
         return view('front.menu-details', compact('menus', 'categoryName'));
     }
+
 
 
     public function contact()
