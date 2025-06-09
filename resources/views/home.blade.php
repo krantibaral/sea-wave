@@ -27,43 +27,7 @@
             </div>
         </div>
 
-        {{-- Special Menus Section --}}
-        <div class="card mb-4 shadow-sm">
-            <div class="card-header bg-white py-3">
-                <h5 class="mb-0">Special Menus</h5>
-            </div>
-            <div class="card-body">
-                @if($specialMenus->count() > 0)
-                    <div class="row">
-                        @foreach ($specialMenus as $menu)
-                            <div class="col-md-3 mb-4">
-                                <div class="card h-100 border-0 shadow-sm hover-shadow-lg transition">
-                                    <img src="{{ $menu->getFirstMediaUrl('food_images') ?: asset('images/default-food.jpg') }}"
-                                        alt="{{ $menu->menu_name }}" class="card-img-top" style="height: 180px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title" style="color: #6c757d; font-weight: 600;">{{ $menu->menu_name }}</h5>
-                                        <div class="d-flex justify-content-between align-items-center mt-2">
-                                            <span class="badge bg-gradient-success px-3 py-2"
-                                                style="font-size: 0.9rem; color: black;">
-                                                ${{ number_format($menu->price, 2) }}
-                                            </span>
-
-                                            <span class="badge bg-light text-dark">{{ $menu->name ?? 'Uncategorized' }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                @else
-                    <div class="text-center py-5">
-                        <i class="fas fa-utensils fa-3x text-muted mb-3"></i>
-                        <h5 class="text-muted">No special menus available today</h5>
-                        <a href="{{ route('menus.create') }}" class="btn btn-primary mt-3">Add New Menu</a>
-                    </div>
-                @endif
-            </div>
-        </div>
+        
     </div>
 @endsection
 
