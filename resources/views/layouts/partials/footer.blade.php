@@ -96,22 +96,11 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group col-md-12 mb-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="accept_terms"
-                                        id="accept_terms" value="1" required>
-                                    <label class="form-check-label" for="accept_terms">
-                                        I accept the <a href="#">Terms and Conditions</a>
-                                    </label>
-                                </div>
-                                @error('accept_terms')
-                                    <div class="text-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
+                  
 
                             <div class="col-lg-12">
                                 <div class="reserve-table-btn">
-                                    <button type="submit" class="btn-default">Reserve Now</button>
+                                    <button type="submit" class="btn-default">Book Now</button>
                                     @if (session('success'))
                                         <div id="msgSubmit" class="alert alert-success mt-3">
                                             {{ session('success') }}

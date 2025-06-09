@@ -396,7 +396,7 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">reserve a table</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">reserve now your table and <span>enjoy dining experience.</span></h2>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Book Now your table and <span>enjoy dining experience.</span></h2>
                         </div>
                         <!-- Section Title End -->
 
@@ -472,7 +472,7 @@
 
                                 <div class="col-lg-12">
                                     <div class="reserve-table-btn">
-                                        <button type="submit" class="btn-default">reserve now</button>
+                                        <button type="submit" class="btn-default">Book Now</button>
                                         <div id="msgSubmit" class="h3 hidden"></div>
                                     </div>
                                 </div>
