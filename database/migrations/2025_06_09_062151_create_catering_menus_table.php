@@ -21,6 +21,7 @@ return new class extends Migration {
             $table->string('slug')->unique();
             $table->boolean('special_menu')->default(false);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

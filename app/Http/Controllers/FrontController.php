@@ -22,11 +22,6 @@ class FrontController extends Controller
     //
     public function index()
     {
-        $menus = Menu::with('category')->get();
-        // Group menus by category name
-        $groupedMenus = $menus->groupBy(function ($menu) {
-            return optional($menu->category)->category_name ?? 'Uncategorized';
-        });
         $cateringSpecialMenus = CateringMenu::with('category')
             ->where('special_menu', true)
             ->latest()
@@ -51,7 +46,7 @@ class FrontController extends Controller
 
 
 
-        return view('welcome', compact('menus', 'specialMenus', 'testimonials', 'groupedMenus', 'storeDetails'));
+        return view('welcome', compact('specialMenus', 'testimonials', 'storeDetails'));
     }
 
 
