@@ -188,7 +188,7 @@ class FrontController extends Controller
             'message' => 'required|string',
         ]);
 
-        Mail::to('seawavebistro@gmail.com')->send(new ContactFormMail($validated));
+        Mail::to('baralkranti4@gmail.com')->send(new ContactFormMail($validated));
 
         return back();
     }
