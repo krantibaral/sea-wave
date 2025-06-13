@@ -22,24 +22,24 @@ class FrontController extends Controller
     //
     public function index()
     {
+        // Do NOT limit before merging
         $cateringSpecialMenus = CateringMenu::with('category')
             ->where('special_menu', true)
             ->latest()
-            ->take(4)
             ->get();
-
 
         $foodTruckSpecialMenus = FoodTruckMenu::with('category')
             ->where('special_menu', true)
             ->latest()
-            ->take(4)
             ->get();
 
+        // Merge all, sort again, then limit final result
         $specialMenus = $cateringSpecialMenus
             ->merge($foodTruckSpecialMenus)
             ->sortByDesc('created_at')
             ->take(4)
             ->values();
+
 
         $testimonials = Testimonial::latest()->get();
         $storeDetails = StoreDetails::first();
@@ -80,24 +80,24 @@ class FrontController extends Controller
     public function menu()
     {
 
+
         $cateringSpecialMenus = CateringMenu::with('category')
             ->where('special_menu', true)
             ->latest()
-            ->take(4)
             ->get();
-
 
         $foodTruckSpecialMenus = FoodTruckMenu::with('category')
             ->where('special_menu', true)
             ->latest()
-            ->take(4)
             ->get();
+
 
         $specialMenus = $cateringSpecialMenus
             ->merge($foodTruckSpecialMenus)
             ->sortByDesc('created_at')
             ->take(4)
             ->values();
+
 
         $cateringCategories = CateringMenuCategory::all();
         $foodTruckCategories = FoodTruckCategory::all();
@@ -152,7 +152,7 @@ class FrontController extends Controller
             'date' => 'required|date|after_or_equal:today',
             'time' => 'required|date_format:H:i',
             'person' => 'required|integer|min:1',
-    
+
         ]);
 
         if ($validator->fails()) {
@@ -169,7 +169,7 @@ class FrontController extends Controller
             'time' => $request->time,
             'person' => $request->person,
             'status' => 'pending',
-        
+
         ]);
 
         return redirect()->back()->with('success', 'Reservation submitted successfully!');
