@@ -152,7 +152,7 @@ class FrontController extends Controller
             'date' => 'required|date|after_or_equal:today',
             'time' => 'required|date_format:H:i',
             'person' => 'required|integer|min:1',
-            'accept_terms' => 'accepted',
+    
         ]);
 
         if ($validator->fails()) {
@@ -169,7 +169,7 @@ class FrontController extends Controller
             'time' => $request->time,
             'person' => $request->person,
             'status' => 'pending',
-            'accept_terms' => true,
+        
         ]);
 
         return redirect()->back()->with('success', 'Reservation submitted successfully!');

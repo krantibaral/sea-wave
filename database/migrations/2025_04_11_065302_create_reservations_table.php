@@ -19,7 +19,6 @@ return new class extends Migration {
             $table->time('time'); 
             $table->integer('person'); 
             $table->enum('status', ['pending', 'confirmed', 'cancelled'])->default('pending'); 
-            // $table->boolean('accept_terms')->default(false); 
             $table->timestamps();
             $table->softDeletes();
         });
