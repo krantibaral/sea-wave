@@ -67,7 +67,7 @@
             <label for="menuDescription" class="required-field">Description</label>
             <textarea class="form-control" id="menuDescription" name="description" rows="3"
                 placeholder="Enter menu description"
-                maxlength="100">{{ old('description', $item->description) }}</textarea>
+                maxlength="300">{{ old('description', $item->description) }}</textarea>
         </div>
     </div>
 
